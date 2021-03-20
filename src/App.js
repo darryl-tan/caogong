@@ -4,6 +4,9 @@ import Banner from './Pages/Banner/Banner.jsx';
 import Body from './Pages/Body/body.jsx';
 import Product from './Pages/Product/Product';
 import Equipment from './Pages/Equipment/Equipment.jsx';
+import News from './Pages/News/news.jsx'
+import Connect from './Pages/Connect/connect.jsx'
+import Bottom from './Pages/Bottom/bottom.jsx'
 export default class App extends Component {
   render() {
     return (
@@ -13,6 +16,9 @@ export default class App extends Component {
         <Body/>
         <Product/>
         <Equipment/>
+        <News/>
+        <Connect/>
+        <Bottom/>
       </div>
     )
   }
