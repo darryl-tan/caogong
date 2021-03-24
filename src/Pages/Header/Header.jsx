@@ -1,32 +1,12 @@
-import React, { Component, useState, useEffect } from "react";
-
+import React, { Component } from "react";
+import { Route, Switch, Link, Redirect, BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "./HeaderStyle.less";
 import logoIcon from "../../Assets/logo.png";
+import Home from "../../App";
+
 import tel from "../../Assets/tel.png";
-
-function ChangeStyle() {
-  const [isHover, setHover] = useState(false);
-
-  return (
-    <div //hover 效果没做好
-      className={isHover ? "hover" : ""}
-      onMouseOver={() => setHover(true)}
-      onMouseOut={() => setHover(false)}
-    >
-      <div className="navbaritem">
-        <div>网站首页</div>
-        <div>产品展示</div>
-        <div>我的店铺</div>
-        <div>新闻咨询</div>
-        <div>厂房设备</div>
-        <div>合作客户</div>
-        <div>呆料供应</div>
-        <div>联系我们</div>
-      </div>
-    </div>
-  );
-}
+import News from "../../NewsPage/newspage";
 
 export class Header extends Component {
   constructor(props) {
@@ -70,6 +50,8 @@ export class Header extends Component {
             <div>呆料供应</div>
             <div>联系我们</div>
           </div>
+
+          {/* <a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer">百度</a>*/}
         </div>
       </div>
     );
