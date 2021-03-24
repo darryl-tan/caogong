@@ -1,0 +1,115 @@
+.connectson{
+    width:1200px;
+    height: 380px;
+    background-color:  #1f1d1d;
+}
+.connect{
+    width: 100%;
+    height: 380px;
+    /* border: 1px solid pink; */
+    background-color: #1f1d1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.connectbox{
+    border: 1px solid #444444;
+    width: 287px;
+    height: 95px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 46px;
+}
+.connectbox2 p:nth-child(1){
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #cccccc;
+    line-height: 10px;
+
+}
+.connectbox2 p:nth-child(2){
+    margin-left: 10px;
+    font: normal 18px/20px Arial;
+    color: #cccccc;
+    line-height: 10px;
+}
+.connects{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+.daohang{
+    
+    font: normal 18px/30px "微软雅黑";
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+.daohangcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 105px;
+    height: 30px;
+    /* border: 1px solid yellow; */
+    margin-bottom: 15px;
+}
+.daohangpapa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.daohangcontent p:nth-child(1){
+    color: orange;
+}
+.daohangcontent p:nth-child(2){
+    color: white;
+    
+}
+.daohangbox{
+    width: 315px;
+    height: 200px;
+    border:1px solid pink;
+}
+.daohangflex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    /* border: 1px solid red; */
+}
+.newsask{
+    width: 315px;
+    height: 200px;
+    border:1px solid pink;
+}
+.connectus{
+    width: 315px;
+    height: 200px;
+    border:1px solid pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+}
+.connectus div p:nth-child(1){
+    color: white;
+}
+.connectus div p:nth-child(2){
+    color: white;
+}
+.connectus div p:nth-child(3){
+    color: white;
+}
+.gong{
+    width: 137px;
+    height: 137px;
+}

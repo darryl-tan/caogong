@@ -1,0 +1,111 @@
+.newsshow{
+    border-left: 3px solid white;
+    width: 500px;
+    height: 65px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+.newsshow p:nth-child(1){
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.newsshow p:nth-child(2){
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.newsbox{
+    width: 100%;
+    height: 650px;
+    /* border: 1px solid pink; */
+    background-color: #005cc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.newsson{
+    /* background-color: pink; */
+    width:1200px;
+    height: 650px;
+}
+.newsmessage{
+    border-bottom: 1px dashed white;
+    display: flex;
+    /* justify-content: flex-start;
+    align-items: center;
+    flex-direction: row; */
+    height: 30px;
+    width: 450px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    /* margin-right: 150px; */
+}
+.newsmessagebox{
+    background-color: rgb(228, 228, 235);
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    margin-right: 20px;
+}
+.newsmessage p{
+    line-height: 30px;
+    color: white;
+    /* border: 1px solid pink; */
+}
+.messagebox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.newsshow2{
+    border-left: 3px solid white;
+    width: 500px;
+    height: 65px;
+    padding-left: 20px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+}
+.newsshow2 p:nth-child(1){
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.newsshow2 p:nth-child(2){
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+/* .partner{
+    width: 20px;
+    height: 20px;
+} */
+.carousel{
+    width: 100%;
+   
+}
+.carousel-slider{
+    width: 100%;
+    /* height: 200px; */
+}
+.partnerbox{
+    width: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005cc4;
+    /* border: 1px solid pink; */
+
+}
+.partnerboximg{
+    height: 100px;
+    width: 230px;
+}
