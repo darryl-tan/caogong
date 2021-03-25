@@ -1,59 +1,78 @@
 import React from "react";
 import axios from "axios";
-const item = "";
+import { Pagination } from 'antd';
+import {Link} from 'react-router-dom';
+
+
+//新闻标题
 class Adder1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       news: [],
+      currentNews:[],
+      page: 1,
+      pageSize: 15
     };
   }
+
   componentDidMount() {
-    axios
-      .get(
-        "http://api.dailiao.xinglianxinglian.com/api/news/list?pageNum=1&pageSize=2"
-      )
-      .then((res) => {
-        this.setState({
-          news: res.data.data,
-        });
-      });
+    this.getList();
   }
-  // componentDidMount() {
-  //   axios.get('http://api.dailiao.xinglianxinglian.com/api/news/list?pageNum=1&pageSize=2')
-  //     .then((res) => {
-  //       // console.log(res.data.data)
 
-  //       this.setState({
-  //         title:res.data.data
-  //       })
+  getList = ()=> {
+    const {page,pageSize}=this.state;
+    // get all data, front-end paging
+    axios
+    .get(
+      `http://api.dailiao.xinglianxinglian.com/api/news/list`
+    )
+    .then((res) => {
+      this.setState({
+        news: res.data.data || [],
+        currentNews: res.data.data.slice(0,15) || []
+      });
+    });
+  }
 
-  //     })
+  handleChange = (page,size) => {
+    // back-end paging
+    // this.setState({page},()=>{this.getList()});
+    // front-end paging using array cutting
+    const {news,pageSize} = this.state;
+    let startRow = (page - 1) * pageSize;
+    let endRow = (page * pageSize) > news.length ? news.length-1 : (page * pageSize);
+    this.setState({
+      currentNews: news.slice(startRow,endRow),
+      page
+    });
+  }
 
   render() {
-    // const newImg = data.map(( item ) =>{ item.Img })
     console.log(this.state.news);
-
     return (
       <div>
-                        
-        <div>
-          {this.state.news.length !== 0 && this.state.news[0].title}
-          <img
-            src={this.state.news.length !== 0 && this.state.news[0].img}
-            alt=""
-          />
-          {this.state.news.length !== 0 && this.state.news[0].viewNum}
-          {this.state.news.length !== 0 && this.state.news[0].desc}
-        </div>
-        <div>{this.state.news.length !== 0 && this.state.news[1].title}</div>
-           
+                       
         <div>
                          
-          {this.state.news.length !== 0 &&
-            this.state.news.map((item) => <div>{item.title}</div>)}
-                      
+          {this.state.currentNews.length !== 0 &&
+            this.state.currentNews.map((item) => 
+              <div key={item.id}>
+                <Link to={{pathname:'/page3',state:item.id}}>{item.title}</Link>
+                {/* <img src={item.img} /> */}
+                <div>
+                  {item.createdAt}
+                </div>
+              </div>)}
         </div>
+
+        <Pagination
+          total={this.state.news.length}
+          showTotal={total => `共${total}条`}
+          defaultCurrent={1}
+          showSizeChanger={false}
+          onChange={this.handleChange}
+    />
                    
       </div>
     );

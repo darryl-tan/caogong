@@ -4,10 +4,9 @@ import ReactDOM from "react-dom";
 import "./HeaderStyle.less";
 import logoIcon from "../../Assets/logo.png";
 import Home from "../../App";
-
 import tel from "../../Assets/tel.png";
-import News from "../../NewsPage/newspage";
 
+//弃用
 export class Header extends Component {
   constructor(props) {
     super(props);

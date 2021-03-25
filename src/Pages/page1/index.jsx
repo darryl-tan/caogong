@@ -12,7 +12,6 @@ import Bottom from '../Bottom/bottom.jsx'
 function index() {
   return (
     <div>
-        {/* <Header></Header> */}
         <Banner></Banner>
         <Body></Body>
         <Product></Product>
